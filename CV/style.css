@@ -1,0 +1,71 @@
+/* Style général du corps de la page */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Police ajoutée */
+  background-color: #f0f0f0; /* Couleur de fond gris très clair */
+}
+
+/* Conteneur principal du CV */
+.cv-container {
+  max-width: 900px; /* Largeur maximale du CV */
+  margin: 30px auto; /* Centrage horizontal avec marge verticale */
+  background-color: #ffffff; /* Fond blanc pour le contenu */
+  padding: 40px; /* Espacement interne */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Ombre légère autour du conteneur */
+}
+
+/* Section de la photo */
+.photo {
+  text-align: center; /* Centrage horizontal de l’image */
+  margin-bottom: 20px; /* Espacement sous la photo */
+}
+
+/* Style de l’image de profil */
+.photo img {
+  width: 150px; /* Largeur fixe */
+  height: 150px; /* Hauteur fixe */
+  object-fit: cover; /* Recadrage de l’image sans déformation */
+  border-radius: 50%; /* Image en cercle */
+  border: 3px solid #0077cc; /* Bordure bleue autour de la photo */
+}
+
+/* En-tête du CV */
+header {
+  text-align: center; /* Centrage du texte */
+  margin-bottom: 30px; /* Espacement sous l’en-tête */
+}
+
+/* Titre principal (nom) */
+header h1 {
+  font-size: 2.5em; /* Taille de police importante */
+  margin-bottom: 10px; /* Espacement sous le nom */
+  color: #333; /* Couleur gris foncé */
+}
+
+/* Informations personnelles */
+.info p {
+  margin: 5px 0; /* Espacement vertical entre les lignes */
+  color: #555; /* Couleur gris moyen */
+}
+
+/* Sections du CV (compétences, loisirs, etc.) */
+.section {
+  margin-bottom: 30px; /* Espacement entre les sections */
+  padding: 20px; /* Espacement interne */
+  border-left: 10px solid #0077cc; /* Bande bleue à gauche pour le style */
+  background-color: #f9f9f9; /* Fond légèrement gris pour différencier */
+}
+
+/* Titres des sections */
+.section h2 {
+  margin-top: 0; /* Supprime l’espace au-dessus du titre */
+  color: #0077cc; /* Couleur bleue */
+  font-size: 1.5em; /* Taille de police moyenne */
+  border-bottom: 2px solid #0077cc; /* Ligne bleue sous le titre */
+  padding-bottom: 5px; /* Espacement entre le texte et la ligne */
+}
+
+/* Style des listes */
+ul {
+  list-style-type: disc; /* Puces rondes */
+  padding-left: 20px; /* Indentation des éléments de liste */
+}

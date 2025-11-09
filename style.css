@@ -63,23 +63,37 @@ header {
 ================================ */
 .frontbar {
   background-color: #333;
-  padding: 1rem 0;
+  padding: 1rem;
   display: flex;
-  justify-content: space-around;
-  border-radius: 25px; /* coins arrondis si tu veux */
-  width: 100%;         /* prend toute la largeur */
-  margin: 1rem 0;      /* juste un peu de marge verticale */
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 25px;
+  width: 100%;
+  max-width: var(--width-content);
+  margin: 1rem auto;
+  overflow-x: auto; /* ✅ scroll horizontal si débordement */
   box-sizing: border-box;
+  white-space: nowrap; /* ✅ empêche le retour à la ligne */
+  -webkit-overflow-scrolling: touch; /* ✅ scroll fluide sur iOS */
+  scrollbar-width: thin;
 }
 
 .frontbar a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  flex-shrink: 0; /* ✅ empêche les liens de se compresser */
 }
+
 
 .frontbar a:hover {
   color: #ccc;
+  background-color: #444;
 }
 
 /* ===============================

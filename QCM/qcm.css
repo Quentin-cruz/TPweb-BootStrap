@@ -1,0 +1,203 @@
+/* ===============================
+   🌐 Variables globales
+================================ */
+:root {
+ --active-brightness: 0.85;
+ --hover-brightness: 1.2;
+ --border-radius: 5px;
+ --box-shadow: 2px 2px 10px;
+ --color-accent: #118bee15;
+ --color-bg: #fff;
+ --color-bg-secondary: #e9e9e9;
+ --color-link: #118bee;
+ --color-secondary: #920de9;
+ --color-secondary-accent: #920de90b;
+ --color-shadow: #f4f4f4;
+ --color-table: #118bee;
+ --color-text: #000;
+ --color-text-secondary: #999;
+ --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+ --line-height: 1.5;
+ --justify-important: center;
+ --justify-normal: left;
+ --width-card: 285px;
+ --width-card-medium: 460px;
+ --width-card-wide: 800px;
+ --width-content: 1080px;
+}
+
+/* ===============================
+   ⚙️ Structure générale
+================================ */
+body {
+    font-family: Trebuchet MS, sans-serif;
+    line-height: var(--line-height);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+a:hover {
+    filter: brightness(var(--hover-brightness));
+}
+
+/* ==============================
+   🧱 Sections principales
+============================== */
+header {
+    text-align: var(--justify-important);
+}
+
+article header,
+div header,
+main header {
+    padding-top: 0;
+}
+
+h1, h3 {
+    line-height: var(--line-height);
+    text-wrap: balance;
+    font-weight: bold;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+/* ==============================
+   Main & layout
+============================== */
+header, main {
+    margin: 0 auto;
+    max-width: var(--width-content);
+    padding: 3rem 1rem;
+}
+
+/* ==============================
+   🧭 Barre de navigation
+============================== */
+.frontbar {
+    background-color: #333;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.frontbar a {
+    color: #fff;
+}
+
+.frontbar a:hover {
+    color: #ccc;
+}
+
+/* ==============================
+   Forms
+============================== */
+form {
+    border: 1px solid var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow) var(--color-shadow);
+    display: block;
+    max-width: var(--width-card-wide);
+    min-width: var(--width-card);
+    padding: 1.5rem;
+    text-align: var(--justify-normal);
+}
+
+/* ==============================
+   🔘 boutons & entrées
+============================== */
+button, input[type="submit"], a b, a strong, a em, a i {
+    font-family: var(--font-family);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+    line-height: var(--line-height);
+    margin: 0.5rem 0;
+    padding: 1rem 2rem;
+    background-color: var(--color-link);
+    border: 2px solid var(--color-link);
+    color: var(--color-bg);
+}
+
+/* ==============================
+   ⚙️ Footer
+============================== */
+footer {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding: 15px;
+    width: 98%;
+}
+
+.footer-text {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ==============================
+   🌄 Fond animé / fonctionnalités
+============================== */
+.wallpaper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(2,0,0.6,1) 0%, rgba(9,9,121,1) 20%, rgba(0,153,255,0.5) 100%);
+  z-index: -1;
+}
+
+#timer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.rickroll {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==============================
+   🧭 Scrollbar custom
+============================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #5BB7FE;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #008FFF;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0074FF;
+}

@@ -45,7 +45,7 @@ main {
 /* ===============================
    🧱 Sections principales
 ================================ */
-header, main, footer {
+header, main {
   position: relative;
   z-index: 1;
   margin: 0 auto;
@@ -66,9 +66,10 @@ header {
   padding: 1rem 0;
   display: flex;
   justify-content: space-around;
-  border-radius: 25px;
-  max-width: 900px;
-  margin: 1rem auto;
+  border-radius: 25px; /* coins arrondis si tu veux */
+  width: 100%;         /* prend toute la largeur */
+  margin: 1rem 0;      /* juste un peu de marge verticale */
+  box-sizing: border-box;
 }
 
 .frontbar a {
@@ -156,19 +157,21 @@ button, input[type="submit"] {
 ================================ */
 footer { 
   background-color: #333;
-  border-radius: 10px;
+  border-radius: 10px; /* coins arrondis si tu veux */
   box-shadow: 0 0 5px rgba(0,0,0,0.75);
   padding: 15px;
-  width: calc(100% - 2rem);
-  margin: 2rem auto;
+  width: 100%;          /* prend toute la largeur */
+  margin: 0;            /* pas de centrage limité */
   color: #fff;
+  box-sizing: border-box;
 }
 
 .footer-text { 
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;              /* texte full width */
+  max-width: var(--width-content); /* contenu centré limité */
   margin: 0 auto;
 }
 

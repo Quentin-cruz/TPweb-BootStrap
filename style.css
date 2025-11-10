@@ -218,3 +218,57 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #0074FF;
 }
+
+
+/* ===============================
+   📱 Mobile responsive : frontbar multi-lignes + centrage local
+================================ */
+@media (max-width: 600px) {
+
+  /* Frontbar sur plusieurs lignes, centrée */
+  .frontbar {
+    flex-wrap: wrap;             /* permet plusieurs lignes */
+    justify-content: center;     /* centre horizontalement chaque ligne */
+    gap: 0.5rem;                 /* réduit l'espacement */
+    padding: 0.5rem 0.5rem;
+    overflow-x: visible;         /* supprime le scroll horizontal */
+  }
+
+  .frontbar a {
+    flex: 0 0 auto;              /* ne pas se compresser */
+    min-width: auto;             /* laisse s'adapter au contenu */
+    text-align: center;          /* centre le texte du lien */
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  /* Centrer localement le contenu des sections principales */
+  header, main, footer {
+    text-align: center;
+  }
+
+  /* Footer texte empilé si nécessaire */
+  .footer-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Titres et paragraphes un peu plus petits sur mobile */
+  h1 { font-size: 1.6rem; }
+  h2, h3, h4, h5, h6 { font-size: 1.2rem; }
+  p { font-size: 0.95rem; }
+
+  /* Médias centrés et responsives */
+  .image, iframe, img, video {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+  }
+
+  /* Boutons plus compacts */
+  a b, a strong, button, input[type="submit"] {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}

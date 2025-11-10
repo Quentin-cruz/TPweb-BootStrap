@@ -1,71 +1,170 @@
-/* Style général du corps de la page */
+/* ===============================
+   🔹 Style général
+================================ */
 body {
-  font-family: 'Segoe UI', sans-serif; /* Police ajoutée */
-  background-color: #f0f0f0; /* Couleur de fond gris très clair */
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Conteneur principal du CV */
+/* ===============================
+   🏗 Conteneur principal
+================================ */
 .cv-container {
-  max-width: 900px; /* Largeur maximale du CV */
-  margin: 30px auto; /* Centrage horizontal avec marge verticale */
-  background-color: #ffffff; /* Fond blanc pour le contenu */
-  padding: 40px; /* Espacement interne */
-  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Ombre légère autour du conteneur */
+  position: relative;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-/* Section de la photo */
+/* ===============================
+   🔘 Liens, boutons & formulaires
+================================ */
+button, .frontbar button {
+  background-color: #ffffffcc;
+  color: #0077cc;
+  border: 2px solid #0077cc;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+button:hover, .frontbar button:hover {
+  background: #0077cc;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,119,204,0.3);
+}
+button:active, .frontbar button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,119,204,0.25);
+}
+
+/* ===============================
+   🌄 Wallpaper animé
+================================ */
+.wallpaper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(2,0,0.6,1) 0%, rgba(9,9,121,1) 20%, rgba(0,153,255,0.5) 100%);
+  z-index: -1;
+}
+
+/* ===============================
+   🧭 Scrollbar custom
+================================ */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #5BB7FE; }
+::-webkit-scrollbar-thumb {
+  background: #008FFF;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: #0074FF; }
+
+/* ===============================
+   📸 Photo & flèches
+================================ */
 .photo {
-  text-align: center; /* Centrage horizontal de l’image */
-  margin-bottom: 20px; /* Espacement sous la photo */
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
-
-/* Style de l’image de profil */
 .photo img {
-  width: 150px; /* Largeur fixe */
-  height: 150px; /* Hauteur fixe */
-  object-fit: cover; /* Recadrage de l’image sans déformation */
-  border-radius: 50%; /* Image en cercle */
-  border: 3px solid #0077cc; /* Bordure bleue autour de la photo */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0077cc;
+}
+.photo a {
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+}
+.photo a::before, .photo a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: 4;
+  filter: drop-shadow(0 6px 12px rgba(3,60,120,0.18));
+  transition: transform 0.2s ease;
+  opacity: 0.98;
+}
+.photo a::before {
+  left: -74px;
+  border-top: 46px solid transparent;
+  border-bottom: 46px solid transparent;
+  border-right: 62px solid #0077cc;
+  transform-origin: center;
+  animation: arrow-breathe-left 1.4s ease-in-out infinite;
+}
+.photo a::after {
+  right: -74px;
+  border-top: 46px solid transparent;
+  border-bottom: 46px solid transparent;
+  border-left: 62px solid #0077cc;
+  transform-origin: center;
+  animation: arrow-breathe-right 1.4s ease-in-out infinite;
+}
+.photo a:hover::before,
+.photo a:hover::after { transform: translateY(-50%) scale(1.06); }
+
+/* Animations flèches */
+@keyframes arrow-breathe-left {
+  0% { transform: translateY(-50%) translateX(-2px) scale(1); opacity: 0.95; }
+  50% { transform: translateY(-50%) translateX(6px) scale(1.06); opacity: 1; }
+  100% { transform: translateY(-50%) translateX(-2px) scale(1); opacity: 0.95; }
+}
+@keyframes arrow-breathe-right {
+  0% { transform: translateY(-50%) translateX(2px) scale(1); opacity: 0.95; }
+  50% { transform: translateY(-50%) translateX(-6px) scale(1.06); opacity: 1; }
+  100% { transform: translateY(-50%) translateX(2px) scale(1); opacity: 0.95; }
 }
 
-/* En-tête du CV */
-header {
-  text-align: center; /* Centrage du texte */
-  margin-bottom: 30px; /* Espacement sous l’en-tête */
+/* Responsive flèches */
+@media (max-width: 720px) {
+  .photo a::before, .photo a::after {
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+  }
+  .photo a::before { border-right-width: 40px; left: -48px; }
+  .photo a::after { border-left-width: 40px; right: -48px; }
 }
 
-/* Titre principal (nom) */
-header h1 {
-  font-size: 2.5em; /* Taille de police importante */
-  margin-bottom: 10px; /* Espacement sous le nom */
-  color: #333; /* Couleur gris foncé */
-}
+/* ===============================
+   📝 Header & infos personnelles
+================================ */
+header { text-align: center; margin-bottom: 30px; }
+header h1 { font-size: 2.5em; margin-bottom: 10px; color: #333; }
+.info p { margin: 5px 0; color: #555; }
 
-/* Informations personnelles */
-.info p {
-  margin: 5px 0; /* Espacement vertical entre les lignes */
-  color: #555; /* Couleur gris moyen */
-}
-
-/* Sections du CV (compétences, loisirs, etc.) */
+/* ===============================
+   📂 Sections du CV
+================================ */
 .section {
-  margin-bottom: 30px; /* Espacement entre les sections */
-  padding: 20px; /* Espacement interne */
-  border-left: 10px solid #0077cc; /* Bande bleue à gauche pour le style */
-  background-color: #f9f9f9; /* Fond légèrement gris pour différencier */
+  margin-bottom: 30px;
+  padding: 20px;
+  border-left: 10px solid #0077cc;
+  background-color: #f9f9f9;
 }
-
-/* Titres des sections */
 .section h2 {
-  margin-top: 0; /* Supprime l’espace au-dessus du titre */
-  color: #0077cc; /* Couleur bleue */
-  font-size: 1.5em; /* Taille de police moyenne */
-  border-bottom: 2px solid #0077cc; /* Ligne bleue sous le titre */
-  padding-bottom: 5px; /* Espacement entre le texte et la ligne */
+  margin-top: 0;
+  color: #0077cc;
+  font-size: 1.5em;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
 }
-
-/* Style des listes */
-ul {
-  list-style-type: disc; /* Puces rondes */
-  padding-left: 20px; /* Indentation des éléments de liste */
-}
+ul { list-style-type: disc; padding-left: 20px; }

@@ -93,16 +93,30 @@ header, main {
     background-color: #333;
     padding: 1rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* conserve la disposition actuelle */
     border-radius: 25px;
+
+    /* Nouveaux effets visuels */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* ombre douce */
+    background: linear-gradient(90deg, #333 0%, #444 100%); /* gradient léger */
 }
 
 .frontbar a {
     color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease; /* transition smooth pour hover */
+
+    /* petit effet shadow de base */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border-radius: 8px; /* léger arrondi pour hover glow */
+    padding: 0.5rem 1rem; /* optionnel mais agréable */
 }
 
 .frontbar a:hover {
-    color: #ccc;
+    color: #00cfff; /* couleur néon au hover */
+    background-color: #222; /* contraste léger avec le fond */
+    box-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff; /* glow */
+    transform: scale(1.05); /* effet zoom subtil */
 }
 
 /* ==============================

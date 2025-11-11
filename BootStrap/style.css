@@ -1,0 +1,32 @@
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Images uniformes et animées */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Effet au survol */
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+/* Texte centré et clair */
+.card-title {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Petit effet visuel sur les cartes */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}

@@ -2,169 +2,149 @@
    🌐 Variables globales
 ================================ */
 :root {
-    --active-brightness: 0.85;
-    --border-radius: 5px;
-    --box-shadow: 2px 2px 10px;
-    --color-accent: #118bee15;
-    --color-bg: #fff;
-    --color-bg-secondary: #e9e9e9;
-    --color-link: #118bee;
-    --color-secondary: #920de9;
-    --color-secondary-accent: #920de90b;
-    --color-shadow: #f4f4f4;
-    --color-table: #118bee;
-    --color-text: #000;
-    --color-text-secondary: #999;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    --hover-brightness: 1.2;
-    --justify-important: center;
-    --justify-normal: left;
-    --line-height: 1.5;
-    --width-card: 285px;
-    --width-card-medium: 460px;
-    --width-card-wide: 800px;
-    --width-content: 1080px;
+  --active-brightness: 0.85;
+  --border-radius: 5px;
+  --box-shadow: 2px 2px 10px;
+  --color-bg: #fff;
+  --color-text: #fff;
+  --color-cloud-bg: rgba(255, 255, 255, 0.08);
+  --color-cloud-hover: rgba(255, 255, 255, 0.15);
+  --width-content: 1080px;
 }
 
 /* ==============================
-   🧱 Sections principales
+   🧱 Structure générale
 ============================== */
+body {
+  font-family: Trebuchet MS, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+}
 
-article header, div header, main header {
-    padding-top: 0;
-}
-h1 {
-	line-height: var(--line-height);
-    text-wrap: balance;
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-header {
-    text-align: var(--justify-important);
-}
 header, main {
-    margin: 0 auto;
-    max-width: var(--width-content);
-    padding: 4rem 1rem;
+  max-width: var(--width-content);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 { font-size: 2em; margin-bottom: 1rem; }
+h2 { font-size: 1.5em; margin-top: 2rem; margin-bottom: 1rem; }
+
+.intro-text {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  font-size: 20px;
+  margin-bottom: 2rem;
 }
 
 /* ==============================
    🧭 Barre de navigation
 ============================== */
 .frontbar {
-    background-color: #333;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-around; /* conserve la disposition actuelle */
-    border-radius: 25px;
-
-    /* Nouveaux effets visuels */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* ombre douce */
-    background: linear-gradient(90deg, #333 0%, #444 100%); /* gradient léger */
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(90deg, #333, #444);
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .frontbar a {
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease; /* transition smooth pour hover */
-
-    /* petit effet shadow de base */
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    border-radius: 8px; /* léger arrondi pour hover glow */
-    padding: 0.5rem 1rem; /* optionnel mais agréable */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .frontbar a:hover {
-    color: #00cfff; /* couleur néon au hover */
-    background-color: #222; /* contraste léger avec le fond */
-    box-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff; /* glow */
-    transform: scale(1.05); /* effet zoom subtil */
+  color: #00cfff;
+  background-color: #222;
+  box-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff;
+  transform: scale(1.05);
 }
 
-
-/* ===============================
-   ⚙️ Structure générale
-================================ */
-
-body {
-	font-family: Trebuchet MS, sans-serif;
-	line-height: var(--line-height);
-	color: #FFFFFF;
-	margin: 0;
-	padding: 0;
+/* ==============================
+   🌄 Fond animé
+============================== */
+.wallpaper {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(90deg, rgba(2,0,0.6,1) 0%, rgba(9,9,121,1) 20%, rgba(0,153,255,0.5) 100%);
+  z-index:-1;
 }
-main{
-	font-style: italic;
-	text-align: center;
-	font-size: 22px;
-    line-height: 1.8;
+
+/* ==================================
+   ☁️ Remerciements (grille animées)
+=================================== */
+.thanks-cloud {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.thank-card {
+  background: var(--color-cloud-bg);
+  border-radius: 15px;
+  padding: 1.2rem 1.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  background: var(--color-cloud-hover);
 }
 
 /* ==============================
    ⚙️ Footer
 ============================== */
 footer {
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    padding: 15px;
-    width: 98%;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  padding: 15px;
+  margin-top: 2rem;
 }
 
 .footer-text {
-    font-family: Trebuchet MS, sans-serif;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
 }
 
-/* ==============================
-   🌄 Fond animé / fonctionnalités
-============================== */
-.wallpaper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(2,0,0.6,1) 0%, rgba(9,9,121,1) 20%, rgba(0,153,255,0.5) 100%);
-  z-index: -1;
-}
-
-.rickroll {
-    text-decoration: none;
-    color: inherit;
-}
+.rickroll { text-decoration: none; color: inherit; }
 
 /* ==============================
    🧭 Scrollbar custom
 ============================== */
-::-webkit-scrollbar {
-    width: 12px;
+::-webkit-scrollbar { 
+    width: 12px; 
 }
-
-::-webkit-scrollbar-track {
-    background: #5BB7FE;
+::-webkit-scrollbar-track { 
+    background: #5BB7FE; 
 }
-
-::-webkit-scrollbar-thumb {
-    background: #008FFF;
-    border-radius: 8px;
+::-webkit-scrollbar-thumb { 
+    background: #008FFF; 
+    border-radius: 8px; 
 }
-
-::-webkit-scrollbar-thumb:hover {
-    background: #0074FF;
-}
-
-
-.rickroll {
-  text-decoration: none;
-  color: inherit;
+::-webkit-scrollbar-thumb:hover { 
+    background: #0074FF; 
 }

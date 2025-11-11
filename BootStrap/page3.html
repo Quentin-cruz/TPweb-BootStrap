@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeux Unreal Engine 5</title>
 
   <!-- Lien vers Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- Lien vers ton fichier CSS -->
   <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-dark">
 
-<!-- Curseurs personnalisés-->
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="../IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../IMG/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../IMG/apple-touch-icon.png">
+  <link rel="manifest" href="../IMG/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Curseurs personnalisés-->
   <style class="curseur">
-    body { cursor: url('IMG/cursor.png'), auto; }
-    a, button { cursor: url('IMG/cursor_lien.png'), auto; }
-    input[type="radio"] + label:hover { cursor: url('IMG/cursor_lien.png'), auto; }
-    input[type="checkbox"] + label:hover { cursor: url('IMG/cursor_lien.png'), auto; }
+    body { cursor: url('../IMG/cursor.png'), auto; }
+    a, button { cursor: url('../IMG/cursor_lien.png'), auto; }
+    input[type="radio"] + label:hover { cursor: url('../IMG/cursor_lien.png'), auto; }
+    input[type="checkbox"] + label:hover { cursor: url('../IMG/cursor_lien.png'), auto; }
   </style>
+
+</head>
+
+<body class="bg-dark text-light">
 
   <!-- En-tête -->
   <header class="text-center py-5 bg-secondary bg-gradient">
     <h1 class="fw-bold">Jeux créés avec Unreal Engine 5</h1>
     <p class="lead">Découvrez une sélection des titres les plus impressionnants développés avec le moteur Unreal Engine 5</p>
   </header>
+
+  <!-- Barre de Navigation -->
+  <div class="frontbar">  
+			<a href='../main.html';>Accueil</a>
+				<a href="QCM.html">Test Origines UE</a>
+					<a href="../page2.html">UE5</a>
+						<a href="QCM2.html">Test UE5</a>
+							<a href="../BootStrap/page3.html">Jeux UE5</a>
+								<a href="../CV/cv.html">CV</a>
+									<a href="../CV/cv_en.html">CV EN</a>
+										<a href="../Credits/credits.html">Crédits</a>
+	</div>
 
   <!-- Contenu principal -->
   <main class="container my-5">
@@ -34,7 +56,7 @@
       <!-- 1 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/immortals-of-aveum-ue5.jpg" class="card-img-top" alt="Immortals of Aveum">
+          <img src="../IMG/immortals-of-aveum.jpeg" class="card-img-top" alt="Immortals of Aveum">
           <div class="card-body">
             <h5 class="card-title">Immortals of Aveum</h5>
           </div>
@@ -44,7 +66,7 @@
       <!-- 2 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/hellblade-2-ue5.jpg" class="card-img-top" alt="Senua’s Saga: Hellblade II">
+          <img src="../IMG/hellblade-2.jpg" class="card-img-top" alt="Senua’s Saga: Hellblade II">
           <div class="card-body">
             <h5 class="card-title">Senua’s Saga: Hellblade II</h5>
           </div>
@@ -54,7 +76,7 @@
       <!-- 3 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/black-myth-wukong-ue5.jpg" class="card-img-top" alt="Black Myth: Wukong">
+          <img src="../IMG/black-myth-wukong.jpg" class="card-img-top" alt="Black Myth: Wukong">
           <div class="card-body">
             <h5 class="card-title">Black Myth: Wukong</h5>
           </div>
@@ -64,7 +86,7 @@
       <!-- 4 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/everspace-2-ue5.jpg" class="card-img-top" alt="Everspace 2">
+          <img src="../IMG/everspace-2.jpg" class="card-img-top" alt="Everspace 2">
           <div class="card-body">
             <h5 class="card-title">Everspace 2</h5>
           </div>
@@ -74,7 +96,7 @@
       <!-- 5 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/manor-lords-ue5.jpg" class="card-img-top" alt="Manor Lords">
+          <img src="../IMG/manor-lords.jpg" class="card-img-top" alt="Manor Lords">
           <div class="card-body">
             <h5 class="card-title">Manor Lords</h5>
           </div>
@@ -84,7 +106,7 @@
       <!-- 6 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/the-first-descendant-ue5.jpg" class="card-img-top" alt="The First Descendant">
+          <img src="../IMG/the-first-descendant.jpg" class="card-img-top" alt="The First Descendant">
           <div class="card-body">
             <h5 class="card-title">The First Descendant</h5>
           </div>
@@ -94,7 +116,7 @@
       <!-- 7 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/ark-2-ue5.jpg" class="card-img-top" alt="ARK 2">
+          <img src="../IMG/ark-2.jpg" class="card-img-top" alt="ARK 2">
           <div class="card-body">
             <h5 class="card-title">ARK 2</h5>
           </div>
@@ -104,7 +126,7 @@
       <!-- 8 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/wuchang-fallen-feathers-ue5.jpg" class="card-img-top" alt="Wuchang: Fallen Feathers">
+          <img src="../IMG/wuchang-fallen-feathers.jpg" class="card-img-top" alt="Wuchang: Fallen Feathers">
           <div class="card-body">
             <h5 class="card-title">Wuchang: Fallen Feathers</h5>
           </div>
@@ -114,7 +136,7 @@
       <!-- 9 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/silent-hill-2-remake-ue5.jpg" class="card-img-top" alt="Silent Hill 2 (Remake)">
+          <img src="../IMG/silent-hill-2-remake.jpg" class="card-img-top" alt="Silent Hill 2 (Remake)">
           <div class="card-body">
             <h5 class="card-title">Silent Hill 2 (Remake)</h5>
           </div>
@@ -124,7 +146,7 @@
       <!-- 10 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/clair-obscur-expedition-33-ue5.jpg" class="card-img-top" alt="Clair Obscur: Expedition 33">
+          <img src="../IMG/clair-obscur-expedition-33.jpg" class="card-img-top" alt="Clair Obscur: Expedition 33">
           <div class="card-body">
             <h5 class="card-title">Clair Obscur: Expedition 33</h5>
           </div>
@@ -134,7 +156,7 @@
       <!-- 11 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/oblivion-remastered-ue5.jpg" class="card-img-top" alt="The Elder Scrolls IV: Oblivion Remastered">
+          <img src="../IMG/oblivion-remastered.jpg" class="card-img-top" alt="The Elder Scrolls IV: Oblivion Remastered">
           <div class="card-body">
             <h5 class="card-title">The Elder Scrolls IV: Oblivion Remastered</h5>
           </div>
@@ -144,7 +166,7 @@
       <!-- 12 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/eternal-strands-ue5.jpg" class="card-img-top" alt="Eternal Strands">
+          <img src="../IMG/eternal-strands.jpg" class="card-img-top" alt="Eternal Strands">
           <div class="card-body">
             <h5 class="card-title">Eternal Strands</h5>
           </div>
@@ -154,7 +176,7 @@
       <!-- 13 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/the-matrix-awakens-ue5.jpg" class="card-img-top" alt="The Matrix Awakens">
+          <img src="../IMG/the-matrix-awakens.jpeg" class="card-img-top" alt="The Matrix Awakens">
           <div class="card-body">
             <h5 class="card-title">The Matrix Awakens</h5>
           </div>
@@ -164,7 +186,7 @@
       <!-- 14 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/mgs-delta-ue5.jpg" class="card-img-top" alt="Metal Gear Solid Delta: Snake Eater">
+          <img src="../IMG/mgs-delta.jpeg" class="card-img-top" alt="Metal Gear Solid Delta: Snake Eater">
           <div class="card-body">
             <h5 class="card-title">Metal Gear Solid Delta: Snake Eater</h5>
           </div>
@@ -174,7 +196,7 @@
       <!-- 15 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/dbz-sparking-zero-ue5.jpg" class="card-img-top" alt="Dragon Ball: Sparking! Zero">
+          <img src="../IMG/dbz-sparking-zero.jpg" class="card-img-top" alt="Dragon Ball: Sparking! Zero">
           <div class="card-body">
             <h5 class="card-title">Dragon Ball: Sparking! Zero</h5>
           </div>
@@ -184,7 +206,7 @@
       <!-- 16 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/the-outer-worlds-2-ue5.jpg" class="card-img-top" alt="The Outer Worlds 2">
+          <img src="../IMG/the-outer-worlds-2.jpg" class="card-img-top" alt="The Outer Worlds 2">
           <div class="card-body">
             <h5 class="card-title">The Outer Worlds 2</h5>
           </div>
@@ -194,7 +216,7 @@
       <!-- 17 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/palworld-ue5.jpg" class="card-img-top" alt="Palworld">
+          <img src="../IMG/palworld.jpg" class="card-img-top" alt="Palworld">
           <div class="card-body">
             <h5 class="card-title">Palworld</h5>
           </div>
@@ -204,7 +226,7 @@
       <!-- 18 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/paranormal-tales-ue5.jpg" class="card-img-top" alt="Paranormal Tales">
+          <img src="../IMG/paranormal-tales.jpg" class="card-img-top" alt="Paranormal Tales">
           <div class="card-body">
             <h5 class="card-title">Paranormal Tales</h5>
           </div>
@@ -214,7 +236,7 @@
       <!-- 19 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/ready-or-not-ue5.jpg" class="card-img-top" alt="Ready or Not (2024)">
+          <img src="../IMG/ready-or-not.jpg" class="card-img-top" alt="Ready or Not (2024)">
           <div class="card-body">
             <h5 class="card-title">Ready or Not (2024)</h5>
           </div>
@@ -224,7 +246,7 @@
       <!-- 20 -->
       <div class="col-md-4">
         <div class="card bg-dark border-light h-100">
-          <img src="https://cdn2.unrealengine.com/frostpunk-1886-ue5.jpg" class="card-img-top" alt="Frostpunk 1886">
+          <img src="../IMG/frostpunk-1886.jpg" class="card-img-top" alt="Frostpunk 1886">
           <div class="card-body">
             <h5 class="card-title">Frostpunk 1886</h5>
           </div>

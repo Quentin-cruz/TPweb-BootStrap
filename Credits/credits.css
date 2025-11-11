@@ -24,13 +24,19 @@ body {
 }
 
 header, main {
-  max-width: var(--width-content);
+  position: relative;
+  z-index: 1;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  max-width: var(--width-content);
+  padding: 1.5rem 1rem; /* même padding que la page référente */
+  box-sizing: border-box;
+}
+
+header {
   text-align: center;
 }
 
-h1 { font-size: 2em; margin-bottom: 1rem; }
+h1 { font-size: 2em; margin-bottom: 0.25rem; }
 h2 { font-size: 1.5em; margin-top: 2rem; margin-bottom: 1rem; }
 
 .intro-text {
@@ -40,33 +46,44 @@ h2 { font-size: 1.5em; margin-top: 2rem; margin-bottom: 1rem; }
   backdrop-filter: blur(6px);
   font-size: 20px;
   margin-bottom: 2rem;
+  text-align: center;        
+  display: flex;             
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==============================
    🧭 Barre de navigation
 ============================== */
 .frontbar {
-  display: flex;
-  justify-content: space-around;
-  background: linear-gradient(90deg, #333, #444);
-  padding: 1rem;
-  border-radius: 25px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    background-color: #333;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around; /* conserve la disposition actuelle */
+    border-radius: 25px;
+
+    /* Nouveaux effets visuels */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* ombre douce */
+    background: linear-gradient(90deg, #333 0%, #444 100%); /* gradient léger */
 }
 
 .frontbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease; /* transition smooth pour hover */
+
+    /* petit effet shadow de base */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border-radius: 8px; /* léger arrondi pour hover glow */
+    padding: 0.5rem 1rem; /* optionnel mais agréable */
 }
 
 .frontbar a:hover {
-  color: #00cfff;
-  background-color: #222;
-  box-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff;
-  transform: scale(1.05);
+    color: #00cfff; /* couleur néon au hover */
+    background-color: #222; /* contraste léger avec le fond */
+    box-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff; /* glow */
+    transform: scale(1.05); /* effet zoom subtil */
 }
 
 /* ==============================

@@ -62,39 +62,43 @@ header {
    🧭 Barre de navigation
 ================================ */
 .frontbar {
-  background-color: #333;
   padding: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;  /* ✅ liens répartis sur toute la largeur */
   align-items: center;
   gap: 1rem;
   border-radius: 25px;
-  width: 100%;
-  max-width: var(--width-content);
+  width: var(--width-content);     /* ✅ largeur fixe cohérente */
+  max-width: 100%;
   margin: 1rem auto;
-  overflow-x: auto; /* ✅ scroll horizontal si débordement */
-  box-sizing: border-box;
-  white-space: nowrap; /* ✅ empêche le retour à la ligne */
-  -webkit-overflow-scrolling: touch; /* ✅ scroll fluide sur iOS */
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
 
-  /* Effets visuels ajoutés */
-  background: linear-gradient(90deg, #333 0%, #444 100%); /* gradient léger */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* ombre douce */
+
+    /* Nouveaux effets visuels */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* ombre douce */
+    background: linear-gradient(90deg, #333 0%, #444 100%); /* gradient léger */
 }
 
 .frontbar a {
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease; /* hover plus smooth */
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  flex-shrink: 0;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease; /* transition smooth pour hover */
 
-  /* léger shadow de base */
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    /* petit effet shadow de base */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border-radius: 8px; /* léger arrondi pour hover glow */
+    padding: 0.5rem 1rem; /* optionnel mais agréable */
+}
+
+.frontbar a:hover {
+    color: #00cfff; /* couleur néon au hover */
+    background-color: #222; /* contraste léger avec le fond */
+    box-shadow: 0 0 10px #00cfff, 0 0 20px #00cfff; /* glow */
+    transform: scale(1.05); /* effet zoom subtil */
 }
 
 .frontbar a:hover {

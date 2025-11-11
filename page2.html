@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unreal Engine 5</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="IMG/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="IMG/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="IMG/apple-touch-icon.png">
+  <link rel="manifest" href="IMG/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Curseurs personnalisés-->
+  <style class="curseur">
+    body { cursor: url('IMG/cursor.png'), auto; }
+    a, button { cursor: url('IMG/cursor_lien.png'), auto; }
+    input[type="radio"] + label:hover { cursor: url('IMG/cursor_lien.png'), auto; }
+    input[type="checkbox"] + label:hover { cursor: url('IMG/cursor_lien.png'), auto; }
+  </style>
+</head>
+<body>
+
+  <!-- image de fond -->
+  <div class="wallpaper">  </div>
+
+  <header>
+    <h1>Unreal Engine 5 <a href="https://www.unrealengine.com/fr" target="_blank"><img src="IMG/favicon-32x32.png" alt="UE5 logo" style="height:28px; vertical-align:middle;"/></a></h1> <!-- Titre principal et logo -->
+    <br>
+    <div class="frontbar">  <!-- Barre de Navigation -->
+      <a href='main.html'>Accueil</a>
+      <a href="QCM/QCM.html">Test Origines UE</a>
+      <a href="page2.html">UE5</a>
+      <a href="QCM/QCM2.html">Test UE5</a>
+      <a href="BootStrap/page3.html">Jeux UE5</a>
+      <a href="CV/cv.html">CV</a>
+      <a href="CV/cv_en.html">CV EN</a>
+      <a href="Credits/credits.html">Crédits</a>
+    </div>
+
+    <h2>Unreal Engine 5 : ce que ça change :</h2>
+    <br>
+    <h3>Qu'est-ce qu'Unreal Engine 5 ?</h3>
+    <p>
+      Unreal Engine 5 (ou UE5) est la génération du moteur de jeu développé par <a class="liens_webs" href="https://www.epicgames.com/site/fr/home" target="_blank">Epic Games</a>.
+      <br>
+      Concrètement, c'est un ensemble d'outils qui permet de créer des jeux, des simulations, et des environnements très réalistes en temps réel. <br>
+      UE5 ajoute des technologies qui facilitent la création de mondes très détaillés sans que l'artiste doive tout optimiser manuellement.
+    </p>
+  </header>
+
+<main>
+  <!-- Vidéo d'intro / tech demo -->
+  <iframe src="https://www.youtube.com/embed/WU0gvPcc3jQ" title="The Matrix Awakens - Unreal Engine 5 Experience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="height:315px; width:560px;"></iframe>
+  <br><br><br>
+
+  <h2>Les innovations visibles (expliquées simplement)</h2>
+  <ul>
+    <li><b>Nanite</b> : imagine que tu peux importer des modèles 3D ultra détaillés (millions de polygones) et que le moteur s'occupe automatiquement de n'afficher que ce qui est nécessaire. Résultat : gains de temps et rendu très précis.</li><br>
+    <li><b>Lumen</b> : système d'éclairage dynamique — la lumière se calcule en temps réel (réflexions, rebonds) sans passer des heures à paramétrer chaque source lumineuse.</li><br>
+    <li><b>Virtual Shadow Maps</b> : ombres très précises adaptées aux géométries détaillées (pour que les ombres ne deviennent pas floues quand on utilise Nanite).</li><br>
+    <li><b>Unreal Editor repensé</b> : éditeur plus puissant pour manipuler scènes, animation, matériaux, sans tout coder.</li><br>
+  </ul>
+  <br>
+
+  <img class="image" src="IMG/nanite.webp" alt="Illustration Nanite" style="max-width:90%; height:auto;">
+  <br><br><br>
+
+  <h2>Comment ça marche ?</h2>
+  <h3>Un moteur, plusieurs couches</h3>
+  <p>
+    UE5 utilise du C++ pour le cœur performant, des systèmes visuels comme Blueprint pour créer la logique sans forcément programmer,
+    et des langages de shaders (HLSL) pour dire à la carte graphique comment colorer et éclairer chaque pixel.
+    <br><br>
+    Nanite gère le niveau de détail des géométries, Lumen gère la lumière, et l'éditeur permet d'assembler tout ça avec des assets (modèles, textures) importés facilement.
+  </p>
+  <br><br>
+
+  <!-- Deuxième vidéo (présentation officielle) -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ON4PFiPidOo" title="Unreal Engine 5 Official" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <br><br><br>
+
+  <h3>Pour qui et pourquoi l'utiliser ?</h3>
+  <p>
+    UE5 est utilisé par : <b>des studios AAA</b>, <b>des indés</b>, mais aussi par des pros de l'architecture, du cinéma et des expériences VR/AR.
+    <br><br>
+    Pourquoi ? Parce qu'il permet de produire des visuels très proches du réel, tout en proposant des outils puissants pour accélérer le travail (bibliothèques d'actifs, intégration Quixel/Megascans, MetaHumans...).
+  </p>
+  <br>
+
+  <img class="image" src="IMG/lumen.jpg" alt="Illustration Lumen" style="max-width:90%; height:auto;">
+  <br><br><br>
+
+  <h3>Le coeur créatif : Unreal Editor</h3>
+  <p>
+    L'éditeur est l'interface où tu construis tes niveaux, annotes ton gameplay, testes l'éclairage et fixes les animations.
+    C'est l'outil principal pour transformer des assets 3D en scène interactive. Il se couple à des plugins (Quixel Bridge, Marketplace) pour récupérer des modèles et textures rapidement.
+  </p>
+  <br><br>
+
+  <img class="image" src="IMG/unreal_editor2.png" alt="Unreal Editor" style="max-width:90%; height:auto;">
+  <br><br><br>
+
+  <h2>Exemples concrets et impact</h2>
+  <p>
+    Des démos comme <i>The Matrix Awakens</i> ou des productions AAA ont servi à montrer que UE5 peut gérer des mondes photoréalistes en temps réel.
+    UE5 est aussi utilisé hors-jeu : cinéma, architecture, formation, expériences interactives.
+  </p>
+  <br>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/A7tp4eg0ax8" title=" " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br><br><br>
+
+  <h3>Projection et limites à connaître</h3>
+  <p>
+    UE5 permet beaucoup, mais pour atteindre de bonnes performances il faut quand même concevoir le projet en pensant optimisation :
+    importer n'importe quel asset sans réfléchir peut alourdir une scène. Epic continue d'améliorer l'outil (mises à jour régulières).
+  </p>
+  <br><br>
+
+  <button onclick="window.location.href = 'QCM/QCM2.html';">Teste tes connaissances sur UE5 !</button>
+  <br><br><br>
+</main>
+
+<footer>
+  <p class="footer-text">
+    <span style="text-align: left;"><a class="rickroll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Cruz Quentin</a></span>
+    <span style="text-align: center;">BTS CIEL 1ère année</span>
+    <span style="text-align: right;">2025-2026</span>
+  </p>
+</footer>
+
+</body>
+</html>
